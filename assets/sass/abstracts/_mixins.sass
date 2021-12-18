@@ -1,0 +1,73 @@
+// for flex containers only
+$mobile1: 568px
+$tablet1: 768px - 1px
+$timeline1: 1000px
+$desktop1: 1024px
+
+=center($value, $value2)
+	display: flex
+	justify-content: $value
+	align-items: $value2
+
+=desktop
+	@media screen and (min-width: $desktop1)
+		@content
+
+=tablet
+	@media screen and (min-width: $tablet1) and (max-width: $desktop1 - 1px)
+		@content
+
+=mobile
+	@media screen and (max-width: $tablet1 - 1px)
+		@content
+
+=retina
+	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+		@content
+
+@mixin border($pixel, $type, $color, $rad)
+	border-width: $pixel
+	border-style: $type
+	border-color: $color
+	border-radius: $rad
+
+=grid($cols, $mgn)
+	float: left
+	margin-right: $mgn
+	margin-bottom: $mgn
+	width: (100 - ($cols - 1) * $mgn) / $cols
+
+	&:nth-child(#{$cols}n)
+		margin-right: 0
+
+=simple-grad($color1, $color2)
+	background: linear-gradient($color1, $color2)
+
+@mixin angle-grad($angle, $color, $color1)
+	background: linear-gradient($angle, $color, $color1)
+
+@mixin bodys
+	min-height: 100vh
+	scroll-behavior: smooth
+	-moz-osx-font-smoothing: grayscale
+	-webkit-font-smoothing: antialiased
+
+=height1($size)
+	height: $size
+
+@function set-text-color($color)
+	@if(lightness($color) > 50)
+		@return $gen26
+	@else
+		@return $gen22
+
+=set-background($color)
+	background-color: $color
+	color: set-text-color($color)
+
+@mixin round($radius)
+	border-radius: $radius
+
+@mixin font-size($sizeValue: 1.6)
+	font-size: ($sizeValue * 10) + px
+	font-size: $sizeValue + rem

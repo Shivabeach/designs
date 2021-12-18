@@ -1,0 +1,33 @@
+/**
+ * The new CSS Reset - version 1.3.1 (last updated 28.10.2021) **
+ *
+ * @format
+ */
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol,
+ul {
+	list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+	max-width: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+	border-collapse: collapse;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+	white-space: revert;
+}

@@ -1,0 +1,21 @@
+@use '../abstracts' as *
+/* main theme colors */
+
+$primary: #140FA9
+
+@function comp($rex)
+	@return compliment($rex)
+
+//$head: compliment(#140FA9)
+
+:root
+	--prime-color: #{$primary}
+	--head-color: #F7D31E
+
+
+#prime
+	background-color: var(--prime-color)
+
+#header
+	background-color: var(--head-color)
+

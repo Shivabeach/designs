@@ -1,0 +1,53 @@
+@use '../abstracts' as *
+
+@function strip-units($length)
+	$munch: $length * 0
+
+	@return $length / $munch
+
+@function px-to-rem($value)
+	$value: strip-units($value)
+	$base-font-size: strip-units($base-font-size)
+	$rem: 1rem
+	@return $value / $base-font-size * $rem
+
+
+
+@function rem($pixels, $context: $base-font-size)
+	@return #{$pixels/$context} * 1rem
+
+
+//! map for input size
+
+@each $size, $wide in $map1
+	.input-#{$size}
+		width: $wide
+
+//function to convert px to vw
+@function get-vw($target)
+	$vw-context: 1000 * 0.01 * 1px
+	@return $target / $vw-context * 1vw
+
+@function size($num)
+	@return #{$num / 2}vw
+@for $i from 1 through 10
+	.fs-#{$i}
+		font-size: size($i)
+
+@function weight($num)
+	@return	($num * 100)
+@for $i from 1 through 9
+	.bold-#{$i}
+		font-weight: weight($i)
+
+@function margin($value)
+	@return	($value * 1px)
+@for $i from 1 through 10
+	.margin-#{$i}
+		margin: margin($i)
+
+@function padd($value)
+	@return	($value * 1rem)
+@for $i from 1 through 10
+	.padding-#{$i}
+		padding: padd($i)

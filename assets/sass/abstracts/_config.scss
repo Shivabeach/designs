@@ -1,0 +1,143 @@
+/**
+ * /* Config
+ *
+ * @format
+ */
+
+$font-stack-helvetica: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+
+$font-stack-lucida-grande: 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva',
+	'Verdana', sans-serif;
+
+$font-stack-verdana: 'Verdana', 'Geneva', sans-serif;
+
+$font-stack-garamond: 'Garamond', 'Baskerville', 'Baskerville Old Face',
+	'Hoefler Text', 'Times New Roman', serif;
+
+$font-stack-georgia: 'Georgia', 'Times', 'Times New Roman', serif;
+
+$font-stack-hoefler-text: 'Hoefler Text', 'Baskerville Old Face', 'Garamond',
+	'Times New RoPliman', serif;
+
+$font-stack-consolas: 'Consolas', 'monaco', monospace;
+
+$font-stack-courier-new: 'Courier New', 'Courier', 'Lucida Sans Typewriter',
+	'Lucida Typewriter', monospace;
+
+$font-stack-monaco: 'Monaco', 'Consolas', 'Lucida Console', monospace;
+
+$font-stack-gill: 'Poor Richard Regular';
+
+$font-stack-fu: 'Fugaz One', cursive;
+
+$font-stack-raleway: Raleway;
+
+$comfortaa: Comfortaa;
+$latina: Latina;
+$hattori: hattori;
+$hattori-italic: hattori-italic;
+
+@font-face {
+	font-family: MerriweatherSans;
+	src: url('../fonts/MerriweatherSans-VariableFont_wght.ttf') {
+		format: ('tff supports variations');
+	}
+	src: url('../fonts/MerriweatherSans-VariableFont_wght.ttf') {
+		format: ('tff-variations');
+	}
+
+	font-weight: 300 800;
+	font-optical-sizing: auto;
+}
+
+@font-face {
+	font-family: Comfortaa;
+	src: url('../fonts/Comfortaa-VariableFont_wght.ttf') {
+		format: ('tff supports variations');
+	}
+	src: url('../fonts/Comfortaa-VariableFont_wght.ttf') {
+		format: ('tff-variations');
+	}
+	font-weight: 300 700;
+}
+@font-face {
+	font-family: Latina;
+	src: url('../fonts/LatinaEssential-Light.otf');
+}
+
+@font-face {
+	font-family: hattori;
+	src: url('../fonts/hattori_light/Hattori_Hanzo-webfont.woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: hattori-italic;
+	src: url('../fonts/hattori_lightitalic/Hattori_Hanzo_Italic.woff');
+}
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+//animations
+$base-duration: 350ms;
+$base-timing: ease;
+
+//constants
+//font-size-base: calc(16px + 0.05vw);
+
+$heading-font-family: $font-stack-georgia;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 6px;
+$base-spacing: 1.5rem;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// From bootstrap
+$font-size-base: 16px;
+$font-size-lg: $font-size-base * 3.5;
+
+$font-weight-lighter: lighter;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-weight-bolder: 900;
+
+$font-weight-base: $font-weight-normal;
+$line-height-base: 1.5;
+
+$h1-font-size: $font-size-base * 2.5;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: $font-size-base * 1.75;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;
+
+$headings-margin-bottom: $base-spacing / 2;
+$headings-font-family: $font-stack-fu;
+$headings-font-weight: 700;
+$headings-line-height: 1.2;
+$headings-color: null;
+
+$display1-size: 6rem;
+$display2-size: 5.5rem;
+$display3-size: 4.5rem;
+$display4-size: 3.5rem;
+
+$display1-weight: 300 * 1;
+$display2-weight: 300 * 2;
+$display3-weight: 300 * 3;
+$display4-weight: 300 * 4;
+$display-line-height: $headings-line-height;
+
+$lead-font-size: $font-size-base * 1.25;
+$lead-font-weight: 300;
+
+$small-font-size: 80%;

@@ -1,0 +1,173 @@
+/** @format */
+
+//maps
+$scheme: (
+	darkprimary: #303f9f,
+	accent: #cddc39,
+	light-primary: #c5cae9,
+	primary: #3f51b5,
+	secondarytext: #757575,
+	primarytext: #212121
+);
+
+$vintage: (
+	dark: #8c353d,
+	text: #594f43,
+	lt-bg: #bfa68f,
+	accent: #bf877a,
+	sec-text: #593e3e
+);
+
+$colors: (
+	bkgd: #080b4a,
+	text: #d8cdd3,
+	text1: #f9c59b,
+	text2: #dbe4ff,
+	text3: #ffe8cc,
+	text4: #d3f9d8,
+	text5: #a5d8ff,
+	text6: #efebe9,
+	text7: #e1bee7
+);
+
+$browncolors: (
+	bg50: #efebe9,
+	bg100: #d7ccc8,
+	bg200: #bcaaa4,
+	bg300: #a1887f,
+	bg400: #8d6e63,
+	bg500: #795548,
+	bg600: #6d4c41,
+	bg700: #5d4037,
+	bg800: #4e342e,
+	bg900: #3e2723
+);
+
+$purple: (
+	Dark-p-c: #512da8,
+	light-p-c: #d1c4e9,
+	prime-color: #673ab7,
+	icons: #ffffff,
+	accnt: #795548,
+	prime-text: #212121,
+	second-text: #757575,
+	divider: #bdbdbd
+);
+
+$tea: (
+	dark: #202b36,
+	purple: #353369,
+	header: #211e9c,
+	darktan: #423d38,
+	text: #694633
+);
+//from the picture of the katydid on the car
+$katy: (
+	dark: #0033fe,
+	accent: #2082ff,
+	accent2: #008dff,
+	text: #8aa5dd,
+	secondary: #345469
+);
+
+$senae: (
+	base: #261b14,
+	drab: #60553a,
+	orange: #f79b2d,
+	pale: #d9ac85,
+	text: #b07b31
+);
+//input sizes
+$map1: (
+	small: 10%,
+	date: calc(100% / 6.4),
+	med: calc(100% / 3),
+	med-lg: calc(100% / 2),
+	large: calc(100% / 1.32),
+	full: 100%
+);
+
+$purpleColor: (
+	darkprimary: hsl(251, 69%, 34%),
+	accent: #bbdefb,
+	light-primary: #b388ff,
+	primary: #673ab7,
+	secondarytext: #f3e5f5,
+	primarytext: #212121
+);
+
+//material design dark colors
+$dark: (
+	md-red: #b71c1c,
+	md-pink: hsl(328, 81%, 29%),
+	md-purple: #4a148c,
+	md-indigo: #1a237e,
+	md-blue: #0d47a1,
+	md-cyan: #006064,
+	md-green: #1b5e20,
+	md-orange: #e65100
+);
+$theme: (
+	main: hsl(320, 41%, 16%),
+	color: #fed9f4,
+	accent: #30997a,
+	secondary: #f99f00,
+	extra: #d75501
+);
+
+$greenie: (
+	prime: hsl(120, 99%, 27%),
+	secondary: hsl(87.17, 99.07%, 41.96%),
+	accent: hsl(156.17, 99.05%, 41.37%),
+	text: hsl(79.06, 100%, 50%),
+	color: hsl(150.71, 100%, 50.2%)
+);
+
+$brownish: (
+	dark: hsla(331.11, 67.5%, 15.69%, 0.9),
+	med-dark: hsl(341.11, 44.26%, 23.92%),
+	lt-dark: hsl(340.62, 40.37%, 31.57%),
+	hi-light: hsl(0, 53.25%, 54.71%),
+	real: hsl(35.04, 85.03%, 28.82%)
+);
+
+$weight: (
+	bold2: 200,
+	bold6: 600,
+	bold7: 700,
+	bold8: 800,
+	bold9: 900
+);
+
+$Jap: (
+	prime: #8c353d,
+	text1: #594f43,
+	accent: #bfa68f,
+	accent2: #bf877a,
+	text2: #593e3e
+);
+
+$orange: (
+	orange4: #ffa94d,
+	orange5: #ff922b,
+	orange6: #fd7e14,
+	orange7: #f76707,
+	orange8: #e8590c,
+	orange9: #ff5800
+);
+
+$genie: (
+	color1: hsl(257, 76%, 56%),
+	color2: hsl(222, 62%, 42%),
+	color3: hsl(207, 90%, 62%),
+	color4: hsl(189, 65%, 45%),
+	color5: hsl(315, 51%, 32%),
+	color6: hsl(356, 94%, 21%),
+	color7: hsl(14, 63%, 27%),
+	color8: hsl(164, 24%, 31%),
+	color9: hsl(105, 42%, 23%),
+	color10: hsl(135, 16%, 57%),
+	color11: hsl(89, 37%, 55%),
+	color12: hsl(109, 75%, 66%),
+	color13: hsl(141, 42%, 64%)
+);

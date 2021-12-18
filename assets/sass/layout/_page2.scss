@@ -1,0 +1,58 @@
+/** @format
+	grid page 2
+*/
+@use '../abstracts' as *;
+#page2-container {
+	background-color: $bisque;
+	margin: 0 auto;
+	width: calc(85% - 100px);
+	display: grid;
+	min-height: 100vh;
+	border: 2px solid $chocolate;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 0.75fr repeat(6, 1fr);
+	grid-gap: 2rem;
+	grid-template-areas:
+		'top top top top'
+		'number1 number2 number2 number3'
+		'number1 number2 number2 number3'
+		'number1 number2 number2 number3'
+		'number1 number2 number2 number3'
+		'number4 number4 number5 number5'
+		'number4 number4 number5 number5';
+}
+
+#top {
+	grid-area: top;
+	display: flex;
+	@include center(flex-end, center);
+}
+.number1 {
+	grid-area: number1;
+	border: 2px solid $chocolate;
+}
+.number2 {
+	grid-area: number2;
+	border: 2px solid $chocolate;
+}
+.number3 {
+	grid-area: number3;
+	border: 2px solid $chocolate;
+}
+.number4 {
+	grid-area: number4;
+	border: 2px solid $chocolate;
+	display: grid;
+	grid-column-gap: 1rem;
+	grid-template-columns: repeat(2, 1fr);
+}
+.number5 {
+	grid-area: number5;
+	border: 2px solid $chocolate;
+}
+.lined:first-child {
+	border-right: 1px solid green;
+}
+.lined:nth-child(2) {
+	border-left: 1px solid #000;
+}
