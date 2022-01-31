@@ -51,7 +51,7 @@ export const addClass = (selector, className, scope) => {
 //
 export const sanitizeInput = (inputValue) => {
 	const div = document.createElement('div');
-	doiv.textContent = inputValue;
+	div.textContent = inputValue;
 	return div.innerHTML;
 };
 //const cleanInput = sanitizeInput(stringtoclean);

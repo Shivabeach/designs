@@ -1,0 +1,12 @@
+{
+  "name": "designs",
+  "version": "1.0.0",
+  "description": "Grid designs",
+  "main": "index.js",
+  "repository": "https://github.com/Shivabeach/designs.git",
+  "author": "Shivabeach <mrwilson1@comcast.net>",
+  "license": "MIT",
+  "dependencies": {
+    "color": "^4.1.0"
+  }
+}

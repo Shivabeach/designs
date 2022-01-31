@@ -1,0 +1,22 @@
+{
+  "workbench.colorCustomizations": {
+    "editor.selectionBackground": "#0000ff",
+    "window.activeBorder": "#9ccc65",
+    "window.inactiveBorder": "#82b1ff",
+    "activityBar.activeBorder": "#07000f",
+    "[codeSTACKr Theme]": {
+      "activityBar.activeBackground": "#87B6E6",
+      "tab.activeBackground": "#0af820",
+      "tab.inactiveBackground": "#898cf8",
+      "tab.activeForeground": "#000",
+      "tab.inactiveForeground": "#000",
+      "editor.background": "#02042a"
+    },
+    "[Andromeda]": {
+      "editor.background": "#02042a"
+    },
+    "[Coder Coder Dark Theme]": {
+      "editor.background": "#02042a"
+    }
+  }
+}

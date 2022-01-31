@@ -1,6 +1,6 @@
 /** @format */
 import { properCase, log, listen, months, addToArray } from './utils.js';
-
+const color = require('color');
 const item1 = document.querySelector('.item-1');
 const item2 = document.querySelector('.item-2');
 const item3 = document.querySelector('.item-3');
@@ -8,6 +8,7 @@ const item4 = document.querySelector('.item-4');
 let datey = document.getElementById('datey');
 const copyr = document.querySelector('.copy');
 
+// site links
 const str = 'Home';
 const item11 = str.link('http://designs/');
 item1.innerHTML = item11;
@@ -26,9 +27,26 @@ function returnDate() {
 	const day = date.getDate();
 	const month = date.getMonth() + 1;
 	const year = date.getFullYear();
+	datey.style.color = '#4b0082';
 	datey.innerHTML = `Today is ${month} / ${day} / ${year}`;
 }
 returnDate();
 
 let yer = new Date();
 copyr.innerHTML = `\u00A92019 - ${yer.getFullYear()}`; //copywright
+
+for (let i = 0; i < document.links.length; i++) {
+	// this highlights the current active link
+	if (document.links[i].href === document.URL) {
+		document.links[i].className = 'current';
+	}
+}
+
+// $(function () {
+//   $('A[rel="external"]').click(function () {
+//     window.open($(this).attr("href"));
+//     return false;
+//   });
+// });
+// const x = document.querySelector("a.external");
+// addEventListener()click
