@@ -16,6 +16,13 @@
 			<p>Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Esse pariatur incidunt laudantium doloremque in facilis ea voluptates temporibus corporis nisi.</p>
 		</div>
 		<div class="block5 block">Number 5
+			Name	William A. Reed<br/>
+			Side	Union<br/>
+			Regiment State/Origin	Michigan<br/>
+			Regiment	10th Regiment, Michigan Infantry<br/>
+			Company	F<br/>
+			Rank In	Private<br/>
+			Rank Out	Private<br/>
 		</div>
 		<div class="block6 block">John C Sholes
 		</div>

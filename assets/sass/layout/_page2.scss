@@ -85,3 +85,7 @@
 	colums: 3;
 	column-gap: 1rem;
 }
+
+div:has(h4) {
+	background-color: var(--granite-green);
+}

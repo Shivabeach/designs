@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * /* Config
  *
@@ -211,14 +212,14 @@ blockquote {
 
 /* Links */
 a {
-  color: #720933;
+  color: hsl(336deg, 86%, 24%);
   text-decoration: none;
 }
 a:visited {
-  color: #2a040d;
+  color: hsl(346deg, 81%, 9%);
 }
 a:hover {
-  color: #c94e4e;
+  color: hsl(0deg, 53.25%, 54.71%);
 }
 
 .inline-list {
@@ -273,11 +274,15 @@ header a:link {
 }
 
 .white {
-  color: #fdf5ff;
+  color: hsl(286deg, 96%, 98%);
 }
 
 .corn {
   box-shadow: 2px 2px 2px #deb887;
+}
+
+.marker::before {
+  content: "👉 ";
 }
 
 /* typography */
@@ -293,8 +298,9 @@ strong {
 
 code {
   font-family: "Courier New", "Courier", "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 1rem;
+  padding-top: 1rem;
 }
 
 h1 {
@@ -342,7 +348,7 @@ button {
   border-radius: 5px;
 }
 button:hover {
-  background: #64eded;
+  background: hsl(180deg, 79.19%, 66.08%);
   color: #36013f;
   box-shadow: 2px 2px 2px #7073e2;
 }
@@ -372,19 +378,19 @@ label {
 }
 
 .input-date {
-  width: calc(100% / 6.4);
+  width: 15.625%;
 }
 
 .input-med {
-  width: calc(100% / 3);
+  width: 33.3333333333%;
 }
 
 .input-med-lg {
-  width: calc(100% / 2);
+  width: 50%;
 }
 
 .input-large {
-  width: calc(100% / 1.32);
+  width: 75.7575757576%;
 }
 
 .input-full {
@@ -610,7 +616,6 @@ label {
 
 #col-11 {
   grid-column: 5/7;
-  padding: 0;
 }
 
 #col-12 {
@@ -735,6 +740,10 @@ label {
   column-gap: 1rem;
 }
 
+div:has(h4) {
+  background-color: var(--granite-green);
+}
+
 /** @format */
 #page3 {
   background-color: blanchedalmond;
@@ -759,7 +768,6 @@ label {
 
 #main-top {
   grid-column: 1/7;
-  display: flex;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -829,6 +837,21 @@ img {
 }
 
 /** @format */
+#page4:has(.theme > [value=normal]:checked) {
+  background: #d3f9d8;
+  color: #2b8a3e;
+}
+
+#page4:has(.theme > [value=light]:checked) {
+  background: #fad590;
+  color: #140fa9;
+}
+
+#page4:has(.theme > [value=dark]:checked) {
+  background: #140fa9;
+  color: #e65100;
+}
+
 #grid4 {
   width: calc(85% - 100px);
   margin-inline: auto;
@@ -888,6 +911,9 @@ img {
 .stwo p:nth-child(4) {
   color: #D3927D;
 }
+.stwo.marker {
+  color: #ffd8a8;
+}
 
 .circle {
   float: left;
@@ -895,8 +921,8 @@ img {
   shape-outside: circle(50%);
   display: grid;
   place-items: center;
-  height: 100px;
-  width: 100px;
+  height: 120px;
+  width: 120px;
   border-radius: 50%;
   background-color: #A0838F;
   color: #CDB97D;
@@ -904,6 +930,54 @@ img {
 
 .moss > li {
   color: #CDB97D;
+}
+
+/** @format */
+#col-5 {
+  background-color: hsl(261deg, 88%, 17%);
+  color: hsl(261deg, 88%, 90%);
+  text-align: center;
+}
+
+.strength-meter {
+  position: relative;
+  height: 2rem;
+  width: 90%;
+  border: 3px solid hsl(261deg, 88%, 57%);
+  border-radius: 1rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.strength-meter::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: calc(1% * var(--strength, 0));
+  background-color: hsl(261deg, 88%, 67%);
+  transition: width 200ms;
+}
+
+.password-input {
+  margin-top: 1rem;
+  width: 90%;
+  padding: 0.25rem 0.75rem;
+  background-color: hsl(261deg, 88%, 25%);
+  color: white;
+  border: 1px solid hsl(261deg, 88%, 57%);
+  outline: none;
+  text-align: center;
+  border-radius: 0.3rem;
+}
+
+.password-input:focus {
+  border-color: hsl(261deg, 88%, 70%);
+}
+
+.reasons > * {
+  margin-top: 0.5rem;
+  color: hsl(261deg, 88%, 80%);
 }
 
 /* Calendar if needed */
@@ -918,7 +992,7 @@ img {
   padding: 2px;
   height: 10em;
   vertical-align: top;
-  width: calc(100% / 7);
+  width: 14.2857142857%;
 }
 
 .highlight {

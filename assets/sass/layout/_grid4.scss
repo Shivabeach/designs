@@ -1,6 +1,27 @@
 /** @format */
 
 @use '../abstracts' as *;
+// :root {
+// 	--bg: map-get($vintage, 'dark');
+// 	--fg: map-get($vintage, 'lt-bg');
+// 	--bgdark: map-get($dark, 'md-red');
+// 	--fgdark: map-get($dark, 'md-orange');
+// }
+
+#page4:has(.theme > [value='normal']:checked) {
+	background: #d3f9d8;
+	color: #2b8a3e;
+}
+
+#page4:has(.theme > [value='light']:checked) {
+	background: #fad590;
+	color: #140fa9;
+}
+
+#page4:has(.theme > [value='dark']:checked) {
+	background: #140fa9;
+	color: #e65100;
+}
 
 #grid4 {
 	width: calc(85% - 100px);
@@ -59,6 +80,9 @@
 	p:nth-child(4) {
 		color: $muted-clay;
 	}
+	&.marker {
+		color: #ffd8a8;
+	}
 }
 .circle {
 	float: left;
@@ -66,8 +90,8 @@
 	shape-outside: circle(50%);
 	display: grid;
 	place-items: center;
-	height: 100px;
-	width: 100px;
+	height: 120px;
+	width: 120px;
 	@include round(50%);
 	background-color: $elderberry;
 	color: $dried-moss;

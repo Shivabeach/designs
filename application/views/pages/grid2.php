@@ -46,7 +46,10 @@
 				<li><a class="external" href="" target="_blank"></a></li>
 			</ul>
 		</div>
-		<div class="number7 border pad">Number 7</div>
+		<div class="number7 border pad trial">
+			<h4>This is an h4</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, minima. Aliquid delectus numquam expedita consequuntur illo mollitia ipsam rerum quibusdam.</p>
+		Number 7</div>
 		<div class="number8 border pad">
 			<p class="copy"></p>
 			<p id="datey"></p>
