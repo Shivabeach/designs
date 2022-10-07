@@ -62,6 +62,7 @@
 			    <li class="listitem" id="data3">DATA 3</li>
 				</ul>
 				<div class="show"></div>
+				<p>revmove duplcatesi</p>
 			</section>
 		</article>
 		<aside id="aside">

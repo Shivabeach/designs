@@ -11,6 +11,9 @@
 #page4:has(.theme > [value='normal']:checked) {
 	background: #d3f9d8;
 	color: #2b8a3e;
+	li {
+		color: $li;
+	}
 }
 
 #page4:has(.theme > [value='light']:checked) {

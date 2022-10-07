@@ -285,6 +285,10 @@ header a:link {
   content: "👉 ";
 }
 
+.darker {
+  color: #140FA9;
+}
+
 /* typography */
 h1,
 h2 {
@@ -570,7 +574,7 @@ label {
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 0.5fr repeat(5, 1fr);
+  grid-template-rows: 0.25fr repeat(5, 1fr);
 }
 
 #header {
@@ -840,6 +844,9 @@ img {
 #page4:has(.theme > [value=normal]:checked) {
   background: #d3f9d8;
   color: #2b8a3e;
+}
+#page4:has(.theme > [value=normal]:checked) li {
+  color: #2c0627;
 }
 
 #page4:has(.theme > [value=light]:checked) {

@@ -51,42 +51,49 @@ document.getElementById('col-12').style.backgroundColor = driedMoss;
 document.getElementById('col-12').style.color = driedMoss.darken(0.5);
 //ident
 const display = document.getElementById('display-array');
-//let make = document.querySelector('.make');
-//const take = document.querySelector('.take');
+let make = document.querySelector('.make');
+const take = document.querySelector('.take');
 const made = document.getElementById('make');
 let sub = document.getElementById('sub');
 const retrieve = localStorage.getItem('lister');
 //array
 let list = [];
-
 function clear() {
-  document.getElementById('make').value = '';
-  document.getElementById('take').value = '';
+  made.value = '';
+  take.value = '';
 }
 
-function local(list) {
-  localStorage.setItem('lister', JSON.stringify(list));
+function getStore() {
+  const choco = 'Shampoo';
+  if (retrieve === null) {
+    list.push(choco);
+    localStorage.setItem('lister', JSON.stringify(list));
+  }
 }
 
 function get() {
   if (localStorage.getItem('lister') === '') {
-    list = [];
+    getStore();
   } else {
     list = JSON.parse(localStorage.getItem('lister'));
     let lists = list.filter((a) => a); // this clears out any empty array items local storage
     let str = '<ul>';
     lists.forEach((item) => {
-      str += `<li>${item}</li>`;
+      item.trim();
+      str += `<li class="darker">${item}</li>`;
     });
     str += '</ul>';
     document.getElementById('displayContainer').innerHTML = str;
   }
-
-  // if (storedData !== '') {
-  //  let list = JSON.parse(storedData);
-  //  display.innerHTML = JSON.parse(storedData);
-  // }
 }
+function local(arr) {
+  list.push(arr);
+  localStorage.setItem('lister', JSON.stringify(list));
+}
+// if (storedData !== '') {
+//  let list = JSON.parse(storedData);
+//  display.innerHTML = JSON.parse(storedData);
+// }
 
 function remove(value) {
   list = list.filter((item) => item !== value);
@@ -105,13 +112,10 @@ sub.addEventListener('click', (e) => {
 
 sub.addEventListener('click', (e) => {
   e.preventDefault();
-  let arr = document.querySelector('.make').value;
-  if (arr.trim() === '') {
-    console.log('Empty');
-  }
+  let arr = make.value;
+  arr.trim();
   let arg = sanitizeInput(arr);
-  list.push(arg);
-  local(list);
+  local(arg);
   get();
   clear();
 });
