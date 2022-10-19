@@ -6,6 +6,14 @@
     <div id="col-1 corn" class="col">
       <p>Column 1</p>
       <div id="datey"></div>
+      <div>
+        <h3>Calc %</h3>
+        <form>
+        <input type="text" class="no1"> <br> <input type="text" class="no2">
+        <button class="click">Calc</button><button type="reset">Clear</button>
+      </div>
+      </form>
+      <div class="calculated"></div>
     </div>
     <div id="col-2" class="col">
       <p>Column 2</p>
@@ -17,7 +25,7 @@
       <p class="display"></p>
     </div>
     <div id="col-3">Column 3
-      <div id="displayContainer"></div>
+      <div id="displayContainer" class="fs-3 padding-2"></div>
     </div>
     <div id="col-4" class="col">Content 4
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Exercitationem quam, magni veritatis itaque

@@ -8,6 +8,12 @@ import {
   sanitizeInput,
 } from './utils.js';
 
+/* for calculations */
+const number1 = document.querySelector('.no1');
+const number2 = document.querySelector('.no2');
+const click = document.querySelector('.click');
+const calculated = document.querySelector('.calculated');
+
 const color = require('color');
 const veryPeri = color('#6868AC');
 const graniteGreen = color('#85A094');
@@ -97,17 +103,17 @@ function local(arr) {
 
 function remove(value) {
   list = list.filter((item) => item !== value);
+  localStorage.setItem('lister', JSON.stringify(list));
   //display.innerHTML = JSON.parse(storedData);
   //console.log(storedData);
 }
 
-sub.addEventListener('click', (e) => {
+sub.addEventListener('submit', (e) => {
   e.preventDefault();
   let theTake = document.getElementById('take').value;
-  if (theTake.trim() !== '') {
-    const sanitize = sanitizeInput(theTake);
-    remove(sanitize);
-  }
+  // if (theTake.trim() !== '') {
+  //   const sanitize = sanitizeInput(theTake);
+  remove(theTake);
 });
 
 sub.addEventListener('click', (e) => {
@@ -288,3 +294,15 @@ function SyncCharacterAmount(e) {
   characterAmountNumber.value = value;
   characterAmountRange.value = value;
 }
+
+function calculate() {
+  const one = number1.value;
+  const two = number2.value;
+  const done = (one / two) * 100;
+  calculated.innerText = done.toFixed(2) + '%';
+}
+
+click.addEventListener('click', (e) => {
+  e.preventDefault();
+  calculate();
+});
