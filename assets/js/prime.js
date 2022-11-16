@@ -58,7 +58,7 @@ document.getElementById('col-12').style.color = driedMoss.darken(0.5);
 //ident
 const display = document.getElementById('display-array');
 let make = document.querySelector('.make');
-const take = document.querySelector('.take');
+let take = document.querySelector('.take');
 const made = document.getElementById('make');
 let sub = document.getElementById('sub');
 const retrieve = localStorage.getItem('lister');
@@ -106,14 +106,16 @@ function remove(value) {
   localStorage.setItem('lister', JSON.stringify(list));
   //display.innerHTML = JSON.parse(storedData);
   //console.log(storedData);
+  get();
 }
 
 sub.addEventListener('submit', (e) => {
   e.preventDefault();
-  let theTake = document.getElementById('take').value;
+  let theTake = take.value;
   // if (theTake.trim() !== '') {
   //   const sanitize = sanitizeInput(theTake);
   remove(theTake);
+  // }
 });
 
 sub.addEventListener('click', (e) => {

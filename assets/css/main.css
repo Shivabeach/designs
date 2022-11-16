@@ -57,7 +57,7 @@
 /** @format */
 /* From base */
 :root {
-  --font-family: $concert;
+  --font-family: Arial;
   --font-family--heading: var(--font-family);
   --font-weight--thin: 100;
   --font-weight--extra-light: 200;
