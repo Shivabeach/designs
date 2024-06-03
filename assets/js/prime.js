@@ -63,29 +63,28 @@ const made = document.getElementById('make');
 let sub = document.getElementById('sub');
 const retrieve = localStorage.getItem('lister');
 //array
-let list = [];
+
 function clear() {
   made.value = '';
   take.value = '';
 }
+let list = [];
 
 function getStore() {
   const choco = 'Shampoo';
-  if (retrieve === null) {
-    list.push(choco);
-    localStorage.setItem('lister', JSON.stringify(list));
-  }
+  list.push(choco);
+  localStorage.setItem('lister', JSON.stringify(list));
+
 }
 
 function get() {
-  if (localStorage.getItem('lister') === '') {
+  if (JSON.parse(localStorage.getItem('lister') === '')) {
     getStore();
   } else {
-    list = JSON.parse(localStorage.getItem('lister'));
-    let lists = list.filter((a) => a); // this clears out any empty array items local storage
+    let liste = JSON.parse(localStorage.getItem('lister'));
+    let lists = liste.filter((a) => a); // this clears out any empty array items local storage
     let str = '<ul>';
     lists.forEach((item) => {
-      item.trim();
       str += `<li class="darker">${item}</li>`;
     });
     str += '</ul>';
@@ -121,9 +120,7 @@ sub.addEventListener('submit', (e) => {
 sub.addEventListener('click', (e) => {
   e.preventDefault();
   let arr = make.value;
-  arr.trim();
-  let arg = sanitizeInput(arr);
-  local(arg);
+  local(arr);
   get();
   clear();
 });
@@ -131,7 +128,9 @@ sub.addEventListener('click', (e) => {
 addEventListener('DOMContentLoaded', () => {
   get();
 });
-
+// ==========================================================================
+// Start passwords
+// ==========================================================================
 passwordInput.addEventListener('input', updateStrengthMeter);
 updateStrengthMeter();
 
@@ -259,6 +258,7 @@ form.addEventListener('submit', (e) => {
     includeSymbols
   );
   passwordDisplay.innerText = password;
+
 });
 
 function generatePassword(
