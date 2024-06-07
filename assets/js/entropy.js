@@ -1,8 +1,6 @@
 /** @format */
 
 import { log } from './utils';
-
-/** @format */
 const passwordDisplay = document.querySelector('.password-display');
 //const passwordEntropy = document.getElementById('password-entropy');
 const passwordGen = document.getElementById('passwordGeneratorForm');
@@ -21,6 +19,7 @@ const passwordScore = 0;
 
 /**
  * E = L × Math.log2(R)
+ * E = L × log2(R)
  * R is the possible range of character types in your password
  * L is the number of characters in your password
  */
@@ -60,8 +59,9 @@ function special(pass) {
 function total(passwordLength) {
 	const generatedString =
 		+spec.value + +numbers.value + +upper.value + +lower.value;
-	const passwordEntropy = passwordLength * Math.log2(generatedString);
-	entropyDisplay.value = passwordEntropy.toFixed(2);
+	const calc = Math.log2(generatedString);
+	const passwordEntropy = passwordLength * calc;
+	entropyDisplay.value = Math.floor(passwordEntropy);
 }
 
 function clear() {
@@ -75,7 +75,7 @@ function clear() {
 }
 
 passwordGen.addEventListener('submit', () => {
-	setTimeout(gen, 1000);
+	setTimeout(gen, 500);
 });
 
 reset1.addEventListener('click', clear);

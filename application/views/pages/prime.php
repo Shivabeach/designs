@@ -57,8 +57,8 @@
 
 			<form id="passwordGeneratorForm" class="form">
 				<label for="characterAmountNumber"> Number of Characters</label>
-				<input type="range" min="1" max="50" value="12" id="characterAmountRange"><br>
-				<input type="number" min="1" max="50" value="12" id="characterAmountNumber">
+				<input type="range" min="1" max="50" value="18" id="characterAmountRange"><br>
+				<input type="number" min="1" max="50" value="18" id="characterAmountNumber">
 				<p>
 					<label for="includeUppercase" class="inl">Include Uppercase</label>
 					<input type="checkbox" id="includeUppercase" checked>
