@@ -49,7 +49,7 @@ document.getElementById('col-4').style.backgroundColor = graniteGreen;
 document.getElementById('col-4').style.color = graniteGreen.darken(0.5);
 document.getElementById('col-11').style.backgroundColor = veryPeri;
 document.getElementById('col-6').style.backgroundColor = hawthornRose;
-document.getElementById('col-6').style.color = hawthornRose.lighten(0.75);
+//document.getElementById('col-6').style.color = hawthornRose.lighten(0.75);
 document.getElementById('col-11').style.color = veryPeri.darken(0.5);
 document.getElementById('col-3').style.backgroundColor = mutedClay;
 document.getElementById('col-3').style.color = mutedClay.darken(0.5);
@@ -74,7 +74,6 @@ function getStore() {
   const choco = 'Shampoo';
   list.push(choco);
   localStorage.setItem('lister', JSON.stringify(list));
-
 }
 
 function get() {
@@ -258,7 +257,6 @@ form.addEventListener('submit', (e) => {
     includeSymbols
   );
   passwordDisplay.innerText = password;
-
 });
 
 function generatePassword(

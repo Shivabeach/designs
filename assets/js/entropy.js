@@ -16,6 +16,10 @@ const lowerScore = 26;
 const upperScore = 26;
 const symbolsScore = 32;
 const passwordScore = 0;
+const specV = document.querySelector('.specV');
+const lowerV = document.querySelector('.lowerV');
+const upperV = document.querySelector('.upperV');
+const digits = document.querySelector('.digits');
 
 /**
  * E = L × Math.log2(R)
@@ -33,6 +37,10 @@ function gen() {
 	num(pass);
 	special(pass);
 	total(passwordLength);
+	specialCharsCounts();
+	lowerCharsCounts();
+	upperCharsCounts();
+	digitCount();
 }
 
 function lowerS(pass) {
@@ -59,9 +67,10 @@ function special(pass) {
 function total(passwordLength) {
 	const generatedString =
 		+spec.value + +numbers.value + +upper.value + +lower.value;
-	const calc = Math.log2(generatedString);
-	const passwordEntropy = passwordLength * calc;
-	entropyDisplay.value = Math.floor(passwordEntropy);
+	const calc = passwordLength * Math.log2(generatedString);
+	//const passwordEntropy = passwordLength * calc;
+	entropyDisplay.value = Math.floor(calc);
+	console.log(Math.log2(generatedString ^ passwordLength));
 }
 
 function clear() {
@@ -72,6 +81,10 @@ function clear() {
 	lower.value = '';
 	length.value = '';
 	passwordDisplay.textContent = '';
+	specV.textContent = '';
+	lowerV.textContent = '';
+	upperV.textContent = '';
+	digits.textContent = '';
 }
 
 passwordGen.addEventListener('submit', () => {
@@ -79,3 +92,55 @@ passwordGen.addEventListener('submit', () => {
 });
 
 reset1.addEventListener('click', clear);
+
+// ==========================================================================
+// Start character counts for spcial chars, numbers upper and lower values
+// ==========================================================================
+
+function specialCharsCounts() {
+	let pass = passwordDisplay.textContent;
+	const specialChars = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?`']+/;
+	let count = 0;
+	for (let i = 0; i < pass.length; i++) {
+		if (specialChars.test(pass[i])) {
+			count++;
+		}
+	}
+	specV.textContent = `${count} Special Characters`;
+}
+
+function lowerCharsCounts() {
+	let pass = passwordDisplay.textContent;
+	const numChars = /[a-z]/;
+	let count = 0;
+	for (let i = 0; i < pass.length; i++) {
+		if (numChars.test(pass[i])) {
+			count++;
+		}
+	}
+	lowerV.textContent = `${count} Lower Characters`;
+}
+
+function upperCharsCounts() {
+	let pass = passwordDisplay.textContent;
+	const upChars = /[A-Z]/;
+	let count = 0;
+	for (let i = 0; i < pass.length; i++) {
+		if (upChars.test(pass[i])) {
+			count++;
+		}
+	}
+	upperV.textContent = `${count} Upper Characters`;
+}
+
+function digitCount() {
+	let pass = passwordDisplay.textContent;
+	const digitChars = /[0-9]/;
+	let count = 0;
+	for (let i = 0; i < pass.length; i++) {
+		if (digitChars.test(pass[i])) {
+			count++;
+		}
+	}
+	digits.textContent = `${count} Digits`;
+}

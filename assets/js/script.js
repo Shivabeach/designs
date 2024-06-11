@@ -48,7 +48,7 @@ for (let i = 0; i < document.links.length; i++) {
 
 // find the positions of a character in a string
 let arg = 'Four score and seven years ago';
-const getIndexOfCharacter = function(arg, char) {
+const getIndexOfCharacter = function (arg, char) {
   let tmpArray = [...arg];
   char = char.toLowerCase();
   return tmpArray.reduce(
@@ -68,3 +68,22 @@ let results = getIndexOfCharacter(arg, 'e');
 // });
 // const x = document.querySelector("a.external");
 // addEventListener()click
+// function countSpecialCharacters(str) {
+//   const specialChars = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+//   let count = 0;
+
+//   for (let i = 0; i < str.length; i++) {
+//     if (specialChars.test(str[i])) {
+//       count++;
+//     }
+//   }
+
+//   return count;
+// }
+
+// const myString = 'oIYFs{9t_7X_=,Z;zs';
+// const specialCharactersCount = countSpecialCharacters(myString);
+
+// console.log(
+//   `The number of special characters in the string is: ${specialCharactersCount}`
+// );

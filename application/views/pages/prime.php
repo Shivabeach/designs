@@ -47,10 +47,10 @@
 				<h3 id="passwordDisplay" class="password-display"></h3>
 				<!-- <h3 id="password-entropy"></h3> -->
 				<p>Length: <input type="text" class="length"></p>
-				<p>Lowercase: <input type="text" class="lower"></p>
-				<p>Uppercase: <input type="text" class="upper"></p>
-				<p>Numbers: <input type="text" class="numbers"></p>
-				<p>Symbols: <input type="text" class="spec"></p>
+				<p>Lowercase: <input type="text" class="lower"> - <span class="lowerV"></span></p>
+				<p>Uppercase: <input type="text" class="upper"> - <span class="upperV"></span> </p>
+				<p>Numbers: <input type="text" class="numbers"> - <span class="digits"></span> </p>
+				<p>Symbols: <input type="text" class="spec"> - <span class="specV fs-3"></span> </p>
 				<p>Entropy <input type="text" class="entropy"></p>
 				<button class="reset" type="reset">Reset</button>
 			</div>

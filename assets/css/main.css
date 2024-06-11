@@ -1339,4 +1339,13 @@ th {
   color: white;
 }
 
+.specV,
+.lowerV,
+.upperV,
+.digits {
+  font-weight: 900;
+  color: #76b4a2;
+  font-size: 1.25vw;
+}
+
 /*# sourceMappingURL=main.css.map */
