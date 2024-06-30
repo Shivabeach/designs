@@ -11,7 +11,7 @@
 				<form>
 					<input type="text" class="no1"> <br> <input type="text" class="no2">
 					<button class="click">Calc</button><button type="reset">Clear</button>
-			</div>
+				</div>
 			</form>
 			<div class="calculated"></div>
 		</div>
@@ -29,12 +29,12 @@
 		</div>
 		<div id="col-4" class="col">Content 4
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Exercitationem quam, magni veritatis itaque
-				perspiciatis commodi velit consequuntur id ex quia.</p>
+			perspiciatis commodi velit consequuntur id ex quia.</p>
 			<p>Remove an item from an array. List is the array, the value is passed from the worm or delete button</p>
 			<code>function remove(value) {
-				list = list.filter((item) => item !== value);
-				display.innerHTML = JSON.parse(storedData);
-				}</code>
+			list = list.filter((item) => item !== value);
+			display.innerHTML = JSON.parse(storedData);
+			}</code>
 		</div>
 		<div id="col-5" class="col">
 			<h3>Password Strength</h3>
@@ -45,6 +45,7 @@
 		<div id="col-6" class="col">
 			<div>
 				<h3 id="passwordDisplay" class="password-display"></h3>
+				<h3 class="randomized"></h3>
 				<!-- <h3 id="password-entropy"></h3> -->
 				<p>Length: <input type="text" class="length"></p>
 				<p>Lowercase: <input type="text" class="lower"> - <span class="lowerV"></span></p>
@@ -54,7 +55,6 @@
 				<p>Entropy <input type="text" class="entropy"></p>
 				<button class="reset" type="reset">Reset</button>
 			</div>
-
 			<form id="passwordGeneratorForm" class="form">
 				<label for="characterAmountNumber"> Number of Characters</label>
 				<input type="range" min="1" max="50" value="18" id="characterAmountRange"><br>
@@ -76,8 +76,13 @@
 		</div>
 		<div id="col-7" class="col"> content 7</div>
 		<div id="col-8" class="col"> content 8</div>
-		<div id="col-9" class="col">Content 9
-			<p>Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Dolores perspiciatis doloribus nihil.</p>
+		<div id="col-9" class="col">Entropy<br>
+			<form action="" class="entForm">
+				Length: <input type="text" class="entLength"><br>
+				Range: <input type="text" class="entRange"><br>
+				Entropy: <input type="text" class="entDisplay"><br>
+				<button type="submit" class="entCalculator">Submits</button>
+			</form>
 		</div>
 		<div id="col-10" class="col"> content 10
 			<h4>Node list</h4>
@@ -89,7 +94,7 @@
 		</div>
 		<div id="col-11" class="col">Column 11
 			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum similique vero eos corporis error consectetur
-				quaerat natus ut possimus enim.</p>
+			quaerat natus ut possimus enim.</p>
 		</div>
 		<div id="col-12">
 			content 12
@@ -101,12 +106,12 @@
 				debitis ea eum aspernatur enim excepturi. Ipsam nulla illo architecto a corporis velit nam quae laudantium eum
 				illum odit nihil eos, praesentium officia blanditiis neque deserunt autem, alias nostrum labore repudiandae. Et
 				unde laudantium nulla qui facere aliquam, quae perspiciatis eum eius ullam porro placeat corporis minima
-				perferendis hic esse, repellat necessitatibus sint a ea eveniet! Veritatis eum earum </p>
+			perferendis hic esse, repellat necessitatibus sint a ea eveniet! Veritatis eum earum </p>
 		</div>
 		<div id="col-13" class="col"> content 13
 			<p>Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Cupiditate corrupti, placeat rerum, </p>
 			<p>enim laboriosam deserunt velit expedita perspiciatis odit aliquam adipisci ipsum architecto aspernatur
-				molestiae sed nisi mollitia. Similique, consequatur!</p>
+			molestiae sed nisi mollitia. Similique, consequatur!</p>
 		</div>
 		<div id="col-14" class="col"> content 14
 			<p class="copy"></p>

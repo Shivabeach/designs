@@ -835,7 +835,10 @@ label {
 .upper,
 .numbers,
 .spec,
-.entropy {
+.entropy,
+.entLength,
+.entRange,
+.entDisplay {
   width: 15.625%;
   display: inline;
 }

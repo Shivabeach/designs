@@ -14,12 +14,18 @@ const reset1 = document.querySelector('.reset');
 const numerics = 10;
 const lowerScore = 26;
 const upperScore = 26;
-const symbolsScore = 32;
+const symbolsScore = 33;
 const passwordScore = 0;
 const specV = document.querySelector('.specV');
 const lowerV = document.querySelector('.lowerV');
 const upperV = document.querySelector('.upperV');
 const digits = document.querySelector('.digits');
+const entLength = document.querySelector('.entLength');
+const entRange = document.querySelector('.entRange');
+const entDisplay = document.querySelector('.entDisplay');
+const entCalculator = document.querySelector('.entCalculator');
+const entForm = document.querySelector('.entForm');
+const randomized = document.querySelector('.randomized');
 
 /**
  * E = L × Math.log2(R)
@@ -41,6 +47,7 @@ function gen() {
 	lowerCharsCounts();
 	upperCharsCounts();
 	digitCount();
+	// shuffleString(pass);
 }
 
 function lowerS(pass) {
@@ -69,8 +76,7 @@ function total(passwordLength) {
 		+spec.value + +numbers.value + +upper.value + +lower.value;
 	const calc = passwordLength * Math.log2(generatedString);
 	//const passwordEntropy = passwordLength * calc;
-	entropyDisplay.value = Math.floor(calc);
-	console.log(Math.log2(generatedString ^ passwordLength));
+	entropyDisplay.value = calc.toFixed(2);
 }
 
 function clear() {
@@ -85,6 +91,7 @@ function clear() {
 	lowerV.textContent = '';
 	upperV.textContent = '';
 	digits.textContent = '';
+	randomized.textContent = '';
 }
 
 passwordGen.addEventListener('submit', () => {
@@ -144,3 +151,28 @@ function digitCount() {
 	}
 	digits.textContent = `${count} Digits`;
 }
+
+entForm.addEventListener('submit', (event) => {
+	event.preventDefault();
+	const eL = entLength.value;
+	const eR = entRange.value;
+	const eResult = eL * Math.log2(eR);
+	entDisplay.value = Math.floor(eResult);
+});
+
+// function shuffleString(str) {
+// 	var array = str.split('');
+// 	for (var i = array.length - 1; i > 0; i--) {
+// 		var j = Math.floor(Math.random() * (i + 1));
+// 		var temp = array[i];
+// 		array[i] = array[j];
+// 		array[j] = temp;
+// 	}
+// 	let randomizedString = array.join('');
+// 	randomized.textContent = randomizedString;
+// }
+
+// Example usage:
+//var originalString = '77lKyT"<OIw[8GLr12mR';
+// var randomizedString = shuffleString(originalString);
+// console.log(randomizedString);
