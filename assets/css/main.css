@@ -1251,7 +1251,7 @@ img {
 
 .password-input {
   margin-top: 1rem;
-  width: 90%;
+  min-width: 30px;
   padding: 0.25rem 0.75rem;
   background-color: hsl(261, 88%, 25%);
   color: white;
@@ -1259,6 +1259,7 @@ img {
   outline: none;
   text-align: center;
   border-radius: 0.3rem;
+  field-sizing: content;
 }
 
 .password-input:focus {
