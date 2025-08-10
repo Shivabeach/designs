@@ -90,6 +90,7 @@ function get() {
     document.getElementById('displayContainer').innerHTML = str;
   }
 }
+
 function local(arr) {
   list.push(arr);
   localStorage.setItem('lister', JSON.stringify(list));
@@ -121,7 +122,7 @@ sub.addEventListener('click', (e) => {
   let arr = make.value;
   local(arr);
   get();
-  clear();
+  //clear();
 });
 
 addEventListener('DOMContentLoaded', () => {
