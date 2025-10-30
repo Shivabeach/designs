@@ -1,6 +1,6 @@
 /** @format */
 import { properCase, log, listen, months, addToArray } from './utils.js';
-const color = require('color');
+//const color = require('color');
 const item1 = document.querySelector('.item-1');
 const item2 = document.querySelector('.item-2');
 const item3 = document.querySelector('.item-3');
@@ -51,14 +51,10 @@ let arg = 'Four score and seven years ago';
 const getIndexOfCharacter = function (arg, char) {
   let tmpArray = [...arg];
   char = char.toLowerCase();
-  return tmpArray.reduce(
-    (results, elem, idx) =>
-      elem.toLowerCase() === char ? [...results, idx] : results,
-    []
-  );
+  return tmpArray.reduce((results, elem, idx) => (elem.toLowerCase() === char ? [...results, idx] : results), []);
 };
 let results = getIndexOfCharacter(arg, 'e');
-//console.log(results);
+console.log(results);
 
 // $(function () {
 //   $('A[rel="external"]').click(function () {
