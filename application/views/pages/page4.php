@@ -1,7 +1,7 @@
 <body id="page4">
 	<div id="grid4">
 		<header class="grid-top">
-			<?php $this->load->view("menus/main_menu.html");?>
+			<?php $this->load->view('menus/main_menu.html'); ?>
 		</header>
 		<article id="article">
 			<section class="sone">
@@ -30,7 +30,7 @@
 			<section class="stwo">
 				<h3>Section Two</h3>
 				<div class="circle">$dried-moss </div>
-				<p>Dried Moss, The float area is determined based on the following values:</p>
+				<p>Dried Moss, The float area is determined based on the following values(shape-outside):</p>
 					<ul class="moss">
 						<li>inset() - for rectangular shapes</li>
 						<li>circle() - for circular shapes</li>
@@ -74,7 +74,7 @@
 			<p class="copy"></p>
 		</div>
 	</div>
-	<script src="<?php echo base_url('assets/js/script-dist.js');?>" defer></script>
-	<script src="<?php echo base_url('assets/js/page4.js');?>" defer></script>
+	<script src="<?php echo base_url('assets/js/script-dist.js'); ?>" defer></script>
+	<script src="<?php echo base_url('assets/js/page4.js'); ?>" defer></script>
 
 </body>

@@ -68,7 +68,7 @@ export let months = [
 	'September',
 	'October',
 	'November',
-	'December',
+	'December'
 ];
 
 export const returnDate = (str) => {
