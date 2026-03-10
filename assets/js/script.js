@@ -39,12 +39,22 @@ returnDate();
 let yer = new Date();
 copyr.innerHTML = `\u00A92019 - ${yer.getFullYear()}`; //copywright
 
-for (let i = 0; i < document.links.length; i++) {
-  // this highlights the current active link
-  if (document.links[i].href === document.URL) {
-    document.links[i].className = 'current';
+// Highlight the current active link using URL normalization
+const normalizeHref = (href) => {
+  try {
+    const u = new URL(href, location.href);
+    u.hash = '';
+    return u.href.replace(/\/$/, '');
+  } catch (err) {
+    return href.replace(/#.*$/, '').replace(/\/$/, '');
   }
-}
+};
+const currentHref = normalizeHref(window.location.href);
+Array.from(document.links).forEach((link) => {
+  if (normalizeHref(link.href) === currentHref) {
+    link.classList.add('current');
+  }
+});
 
 // find the positions of a character in a string
 let arg = 'Four score and seven years ago';

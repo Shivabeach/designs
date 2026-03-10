@@ -11,20 +11,18 @@
 					<option value="light">Light</option>
 					<option value="dark">Dark</option>
 				</select>
-
-
 				<ul>
 					<li>Create eatable food list</li>
-					<label><input type="checkbox" name="" id="">Checkbox</label>
-					<li>Create list of vegetables</li>
-					<li>Create meal plans</li>
-					<li>Create shopping list</li>
-					<li>Create desirable meats list</li>
-					<li>Look up Paleo food list</li>
-					<li>Explore protein sources</li>
-					<li>Create selector box</li>
-					<li>Create full app</li>
-					<li>Create aJSOn file of all the meats, veggies, oils and nuts</li>
+					<li><input type="checkbox" name="#" id="*">Checkbox</li>
+					<li><input type="checkbox" name="#" id="*">Create list of vegetables</li>
+					<li><input type="checkbox" name="#" id="*">Create meal plans</li>
+					<li><input type="checkbox" name="#" id="*">Create shopping list</li>
+					<li><input type="checkbox" name="#" id="*">Create desirable meats list</li>
+					<li><input type="checkbox" name="#" id="*">Look up Paleo food list</li>
+					<li><input type="checkbox" name="#" id="*">Explore protein sources</li>
+					<li><input type="checkbox" name="#" id="*">Create selector box</li>
+					<li><input type="checkbox" name="#" id="*">Create full app</li>
+					<li><input type="checkbox" name="#" id="*">Create a JSON file of all the meats, veggies, oils and nuts</li>
 				</ul>
 			</section>
 			<section class="stwo">
