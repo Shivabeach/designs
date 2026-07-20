@@ -1,7 +1,7 @@
 <body id="page3">
     <div id="grid3">
         <header id="main-top">
-            <?php $this->load->view("menus/main_menu.html");?>
+            <?php $this->load->view('menus/main_menu.html'); ?>
         </header>
         <div class="block1 block">
             <h3>Page 3</h3>
@@ -10,6 +10,7 @@
                 <input type="date" id="date-input" name="date-input">
                 <div class="create"></div>
                 <button type="button" id="submit-date">Submit</button>
+            </form>    
         </div>
         <div class="block2 block">
             <div id="datey"></div>
@@ -110,6 +111,6 @@
             <p>Project started Dec 5, 2021</p>
         </div>
     </div>
-    <script src="<?php echo base_url('assets/js/script-dist.js');?>"></script>
-    <script src="<?php echo base_url('assets/js/create.js');?>"></script>
+    <script src="<?php echo base_url('assets/js/script-dist.js'); ?>"></script>
+    <script src="<?php echo base_url('assets/js/create.js'); ?>"></script>
 </body>
